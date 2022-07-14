@@ -6,7 +6,7 @@ I plan on making an application that allows the user to look over a list of mons
 
 ## Wireframes
 
-![wireframe 1] (https://github.com/Rancor38/monster/blob/main/proposal/wireframes/Wireframe%201.png)
+![wireframe 1] (https://github.com/Rancor38/monster/blob/main/proposal/wireframes/Wireframe%201.png?raw=true)
 ![wireframe 2] (https://github.com/Rancor38/monster/blob/main/proposal/wireframes/Wireframe%202.png?raw=true)
 ![wireframe 3] (https://github.com/Rancor38/monster/blob/main/proposal/wireframes/Wireframe%203.png?raw=true)
 
