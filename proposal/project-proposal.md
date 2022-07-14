@@ -1,6 +1,6 @@
 # Project Proposal
 
-## Project Description
+## D&D Monster Searcher
 
 I plan on making an application that allows the user to look over a list of monsters from Dungeons and Dragons Fifth Edition. I am going to pull the data from the Open5e API. The homepage will display a list of monsters pulled from the API (displayed as cards if I can get the styling right, or as names if I cannot), and clicking on the monster 'card' should reveal the monster's stat-block, also pulled from the API.
 
