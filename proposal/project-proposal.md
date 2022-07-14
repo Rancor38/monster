@@ -6,11 +6,11 @@ I plan on making an application that allows the user to look over a list of mons
 
 ## Wireframes
 
-###Wireframe 1
+### Wireframe 1
 <img src="https://github.com/Rancor38/monster/blob/main/proposal/wireframes/Wireframe%201.png?raw=true" alt="Wireframe 1">
-###Wireframe 2
+### Wireframe 2
 <img src="https://github.com/Rancor38/monster/blob/main/proposal/wireframes/Wireframe%202.png?raw=true" alt="Wireframe 2">
-###Wireframe 3
+### Wireframe 3
 <img src="https://github.com/Rancor38/monster/blob/main/proposal/wireframes/Wireframe%203.png?raw=true" alt="Wireframe 3">
 
 ### MVP User Stories
