@@ -6,11 +6,12 @@ I plan on making an application that allows the user to look over a list of mons
 
 ## Wireframes
 
+###Wireframe 1
 <img src="https://github.com/Rancor38/monster/blob/main/proposal/wireframes/Wireframe%201.png?raw=true" alt="Wireframe 1">
-![wireframe 1] ()
-![wireframe 2] (https://github.com/Rancor38/monster/blob/main/proposal/wireframes/Wireframe%202.png?raw=true)
-![wireframe 3] (https://github.com/Rancor38/monster/blob/main/proposal/wireframes/Wireframe%203.png?raw=true)
-
+###Wireframe 2
+<img src="https://github.com/Rancor38/monster/blob/main/proposal/wireframes/Wireframe%202.png?raw=true" alt="Wireframe 2">
+###Wireframe 3
+<img src="https://github.com/Rancor38/monster/blob/main/proposal/wireframes/Wireframe%203.png?raw=true" alt="Wireframe 3">
 
 ### MVP User Stories
 
@@ -28,4 +29,4 @@ https://open5e.com/api-docs
 
 ## Component Hierarchy
 
-![Component Heirarchy] (https://raw.githubusercontent.com/Rancor38/monster/main/proposal/Component%20Hierarchy.png)
+<img src="https://raw.githubusercontent.com/Rancor38/monster/main/proposal/Component%20Hierarchy.png" alt="Component Hierarchy">
