@@ -6,9 +6,9 @@ I plan on making an application that allows the user to look over a list of mons
 
 ## Wireframes
 
-https://github.com/Rancor38/monster/blob/main/proposal/wireframes/Wireframe%201.png?raw=true
-https://github.com/Rancor38/monster/blob/main/proposal/wireframes/Wireframe%202.png?raw=true
-https://github.com/Rancor38/monster/blob/main/proposal/wireframes/Wireframe%203.png?raw=true
+![wireframe 1] (https://github.com/Rancor38/monster/blob/main/proposal/wireframes/Wireframe%201.png?raw=true)
+![wireframe 2] (https://github.com/Rancor38/monster/blob/main/proposal/wireframes/Wireframe%202.png?raw=true)
+![wireframe 3] (https://github.com/Rancor38/monster/blob/main/proposal/wireframes/Wireframe%203.png?raw=true)
 
 
 ### MVP User Stories
@@ -27,4 +27,4 @@ https://open5e.com/api-docs
 
 ## Component Hierarchy
 
-https://raw.githubusercontent.com/Rancor38/monster/main/proposal/Component%20Hierarchy.png
+![Component Heirarchy] (https://raw.githubusercontent.com/Rancor38/monster/main/proposal/Component%20Hierarchy.png)
