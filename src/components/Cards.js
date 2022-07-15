@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import beholder from '../beholder.svg'
 
-const Cards = () => {
-
+const Cards = (props) => {
+    //passing props from App.js to determine which URL we are using.
+const url = props.url
   //Creating some State
   const [monsters, setMonsters] = useState([]);
 
   //pulling useEffect in here to manipulate the DOM.
 
   useEffect(() => {
-    const url = "https://api.open5e.com/monsters/?document__slug=wotc-srd"
-
+    
     fetch(url)
       .then((res) => res.json())
       .then((json) => {
