@@ -15,7 +15,6 @@ const url = props.url
       .then((res) => res.json())
       .then((json) => {
         setMonsters(json.results)
-        console.log(json)
       })
       .catch(err => console.log(err))
   })
@@ -26,7 +25,7 @@ const url = props.url
             return (
                 <div key={monster.name.toString()} className="card">
     <div className="card-image">
-      <img
+      <img className='card-art'
         src={beholder} alt="beholder"/>
     </div>
     <div className="card-title">
