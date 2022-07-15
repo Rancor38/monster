@@ -26,10 +26,11 @@ const url = props.url
                 <div key={monster.name.toString()} className="card">
     <div className="card-image">
       <img className='card-art'
-        src={beholder} alt="beholder"/>
+        src={beholder} alt="dragon"/>
     </div>
     <div className="card-title">
       <h3>{monster.name}</h3>
+      <h4>{monster.size} {monster.type}, CR {monster.challenge_rating}</h4>
     </div>
   </div>
             )
