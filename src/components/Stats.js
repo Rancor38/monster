@@ -16,6 +16,11 @@ const Stats = (props) => {
           })
           .catch(err => console.log(err))
       })
+      
+      if (!monster[0]) {
+        return <p>loading information...</p>
+      }
+
     return (
         <div className="details-container">
         <img
