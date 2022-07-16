@@ -1,6 +1,11 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Stats = () => {
+
+    const [monster, setMonster] = useState(null);
+
+    useEffect (() => {}, []);
+
     return (
         <div className="details-container">
         <img
