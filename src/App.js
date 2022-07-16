@@ -1,3 +1,4 @@
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Cards from './components/Cards';
 import Header from './components/Header';
@@ -8,31 +9,20 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1>Welcome to Monsters!</h1>
       <Header />
-      <Cards 
+<main>
+    <Routes>
+      <Route path='/' element={ <Cards 
       url={"https://api.open5e.com/monsters/?document__slug=wotc-srd"}
-      />
-      <Cards 
-      url={"https://api.open5e.com/monsters/?document__slug=wotc-srd&page=2"}
-      />
-      <Cards 
-      url={"https://api.open5e.com/monsters/?document__slug=wotc-srd&page=3"}
-      />
-      <Cards 
-      url={"https://api.open5e.com/monsters/?document__slug=wotc-srd&page=4"}
-      />
-      <Cards 
-      url={"https://api.open5e.com/monsters/?document__slug=wotc-srd&page=5"}
-      />
-      <Cards 
-      url={"https://api.open5e.com/monsters/?document__slug=wotc-srd&page=6"}
-      />
-      <Cards 
-      url={"https://api.open5e.com/monsters/?document__slug=wotc-srd&page=7"}
-      />
+      />}/>
+      <Route path='stats' element={<Stats /> }/>
+    </Routes>
+</main>
+
+      
+     
       <About />
-      <Stats />
+      
     </div>
   );
 }
