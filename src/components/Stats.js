@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 // import { useParams } from 'react-router-dom'
 
 const Stats = () => {
@@ -6,12 +7,12 @@ const Stats = () => {
     // const url = 'https://api.open5e.com/monsters/adult-red-dragon'
 
     const [monster, setMonster] = useState([]);
-        let name = 'Acolyte'
-        let lowercase = name.toLocaleLowerCase()
-    // let { name } = useParams();
-
+    const { name } = useParams();
+    console.log(name)
+    let lowercase = name.toLocaleLowerCase()
+    console.log(lowercase)
     useEffect(() => {
-    
+        
         fetch('https://api.open5e.com/monsters/?search=' + lowercase)
           .then((res) => res.json())
           .then((json) => {
@@ -20,7 +21,7 @@ const Stats = () => {
           .catch(err => console.log(err))
       })
       
-      if (!monster) {
+      if (!monster[0]) {
         return <p>loading information...</p>
       }
 
