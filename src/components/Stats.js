@@ -1,15 +1,18 @@
 import React, { useState, useEffect } from 'react';
+// import { useParams } from 'react-router-dom'
 
-const Stats = (props) => {
+const Stats = () => {
 
-    const url = props.url+'aboleth'
+    // const url = 'https://api.open5e.com/monsters/adult-red-dragon'
 
     const [monster, setMonster] = useState([]);
+        let name = 'Acolyte'
+        let lowercase = name.toLocaleLowerCase()
     // let { name } = useParams();
 
     useEffect(() => {
     
-        fetch(url)
+        fetch('https://api.open5e.com/monsters/?search=' + lowercase)
           .then((res) => res.json())
           .then((json) => {
             setMonster(json.results)
@@ -17,7 +20,7 @@ const Stats = (props) => {
           .catch(err => console.log(err))
       })
       
-      if (!monster[0]) {
+      if (!monster) {
         return <p>loading information...</p>
       }
 

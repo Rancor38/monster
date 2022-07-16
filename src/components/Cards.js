@@ -24,7 +24,7 @@ const url = props.url + '?document__slug=wotc-srd'
         <section className="container"> 
         {monsters.map ((monster) => {
             return (
-    <Link to={`stats/${monster.slug}`} key={monster.slug.toString()} className="card">
+    <Link to={`stats/${monster.name}`} key={monster.name.toString()} className="card">
     <div className="card-image">
       <img className='card-art'
         src={beholder} alt="dragon"/>
