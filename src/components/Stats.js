@@ -1,25 +1,21 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
 
-const Stats = () => {
+const Stats = (props) => {
 
-    const url = 'https://api.open5e.com/monsters/'
+    const url = props.url+'aboleth'
 
-    const [monster, setMonster] = useState();
-    const { name } = useParams();
-    let nameToURL = name.toLowerCase();
+    const [monster, setMonster] = useState([]);
+    // let { name } = useParams();
 
     useEffect(() => {
     
-        fetch(url + `${nameToURL}`)
+        fetch(url)
           .then((res) => res.json())
           .then((json) => {
-            setMonster(json)
-            console.log(monster)
+            setMonster(json.results)
           })
           .catch(err => console.log(err))
       })
-
     return (
         <div className="details-container">
         <img
@@ -27,8 +23,8 @@ const Stats = () => {
           alt="Acadian Flycatcher"
         />
         <div className="details">
-          <h2>{name}</h2>
-          <h3>{monster.size} {monster.type}</h3>
+          <h2>{monster[0].name}</h2>
+          <h3>(Empidonax virescens)</h3>
           <h4>Conservation Status</h4>
           <p>
             Would be vulnerable to loss of habitat, but no significant decline noted

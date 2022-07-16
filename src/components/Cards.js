@@ -4,7 +4,7 @@ import beholder from '../beholder.svg'
 
 const Cards = (props) => {
     //passing props from App.js to determine which URL we are using.
-const url = props.url
+const url = props.url + '?document__slug=wotc-srd'
   //Creating some State
   const [monsters, setMonsters] = useState([]);
 
@@ -24,7 +24,7 @@ const url = props.url
         <section className="container"> 
         {monsters.map ((monster) => {
             return (
-    <Link to={`stats/${monster.name}`} key={monster.name.toString()} className="card">
+    <Link to={`stats/${monster.slug}`} key={monster.slug.toString()} className="card">
     <div className="card-image">
       <img className='card-art'
         src={beholder} alt="dragon"/>
