@@ -4,16 +4,19 @@ import { useParams } from 'react-router-dom';
 
 const Stats = () => {
 
-    // const url = 'https://api.open5e.com/monsters/adult-red-dragon'
+    const url = 'https://api.open5e.com/monsters/?search='
 
+    // Setting state for individual Monster
     const [monster, setMonster] = useState([]);
+    // Snagging the url as a parameter
     const { name } = useParams();
-    console.log(name)
+    // transforming the parameter into lowercase because the names use case sensitivity, and the slugs don't work because the API made a mistake, they use the names, which yes, does include unsightly URLs in the address. 
+
     let lowercase = name.toLocaleLowerCase()
-    console.log(lowercase)
+    // Creating side effects in the DOM.
     useEffect(() => {
         
-        fetch('https://api.open5e.com/monsters/?search=' + lowercase)
+        fetch(url + lowercase)
           .then((res) => res.json())
           .then((json) => {
             setMonster(json.results)
@@ -33,7 +36,7 @@ const Stats = () => {
         />
         <div className="details">
           <h2>{monster[0].name}</h2>
-          <h3>(Empidonax virescens)</h3>
+          <h3>{monster[0].size} {monster[0].type}, {monster[0].alignment}</h3>
           <h4>Conservation Status</h4>
           <p>
             Would be vulnerable to loss of habitat, but no significant decline noted
