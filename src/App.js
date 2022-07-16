@@ -15,7 +15,7 @@ const App = () => {
       <Route path='/' element={ <Cards 
       url={"https://api.open5e.com/monsters/?document__slug=wotc-srd"}
       />}/>
-      <Route path='stats' element={<Stats /> }/>
+      <Route path='stats/:name' element={<Stats /> }/>
     </Routes>
 </main>
 
