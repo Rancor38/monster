@@ -4,7 +4,7 @@ import beholder from '../beholder.svg'
 
 const Cards = (props) => {
     //passing props from App.js to determine which URL we are using.
-const url = props.url + '?document__slug=wotc-srd'
+const url = 'https://api.open5e.com/monsters/' + props.url
   //Creating some State
   const [monsters, setMonsters] = useState([]);
 
@@ -19,6 +19,10 @@ const url = props.url + '?document__slug=wotc-srd'
       })
       .catch(err => console.log(err))
   })
+
+  if (!monsters) {
+    return <p>loading information...</p>
+  }
 
     return (
         <section className="container"> 

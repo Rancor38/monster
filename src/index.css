@@ -91,6 +91,7 @@ header a {
 .details {
   padding: 1rem;
   width: 350px;
+  background-color: antiquewhite;
 }
 
 .details h2 {
