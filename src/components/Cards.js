@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import React, { useState, useEffect } from 'react';
-import beholder from '../beholder.svg'
-import dots from '../3-dots-bounce.svg'
+import dragon from '../dragon.svg'
+import dot from '../3-dots-bounce.svg'
 
 const Cards = (props) => {
     //passing props from App.js to determine which URL we are using.
@@ -18,12 +18,12 @@ const url = 'https://api.open5e.com/monsters/' + props.url
       .then((json) => {
         setMonsters(json.results)
       })
-      .catch(err => console.log(err))
+      .catch(err => console.err)
   }, []);
 
   if (!monsters) {
     return <><p>loading information</p> <img className='card-art'
-    src={dots} alt="dots"/></>
+    src={dot} alt="dots"/></>
   }
 
     return (
@@ -33,7 +33,7 @@ const url = 'https://api.open5e.com/monsters/' + props.url
     <Link to={`stats/${monster.name}`} key={monster.name.toString()} className="card">
     <div className="card-image">
       <img className='card-art'
-        src={beholder} alt="dragon"/>
+        src={dragon} alt="dragon"/>
     </div>
     <div className="card-title">
       <h3>{monster.name}</h3>

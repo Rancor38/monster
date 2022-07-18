@@ -1,10 +1,8 @@
 import { Route, Routes } from 'react-router-dom';
-import './App.css';
 import Cards from './components/Cards';
 import Header from './components/Header';
 import About from './components/About';
 import Stats from './components/Stats';
-import Footer from './components/Footer';
 
 const App = () => {
 
@@ -14,8 +12,8 @@ const App = () => {
 <main>
     <Routes>
       <Route path='/' element={ 
+        //start of fragment
       <>
-
       <Cards 
       url={'?document__slug=wotc-srd'}
       />
@@ -38,14 +36,12 @@ const App = () => {
       url={'?document__slug=wotc-srd&page=7'}
       />
       </>
+      // end of fragment
       }/>
+      <Route path='/about' element={<About/>}/>
       <Route path='stats/:name' element={<Stats /> }/>
     </Routes>
 </main>
-
-      
-      <Footer />
-      {/* <About /> */}
       
     </div>
   );

@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import beholder from '../beholder.svg'
+import dot from '../3-dots-bounce.svg'
 
 const Stats = () => {
 
-    const url = 'https://api.open5e.com/monsters/?search='
+    const url = 'https://api.open5e.com/monsters/?document__slug=wotc-srd&search='
 
     // Setting state for individual Monster
     const [monster, setMonster] = useState([]);
@@ -21,11 +21,12 @@ const Stats = () => {
           .then((json) => {
             setMonster(json.results)
           })
-          .catch(err => console.log(err))
+          .catch(err => console.err)
       }, []);
       
       if (!monster[0]) {
-        return <p>loading information...</p>
+        return <><h1>Fetching monsters</h1> <img className='card-art'
+        src={dot} alt="dots"/></>
       }
 
     return (
@@ -35,16 +36,32 @@ const Stats = () => {
           <h3>{monster[0].size} {monster[0].type}, {monster[0].alignment}</h3>
           <h4>Armor Class {monster[0].armor_class} ({monster[0].armor_desc})</h4>
           <h4>Hit Points {monster[0].hit_points} ({monster[0].hit_dice})</h4>
-          {/* {console.log(monster[0].speed.walk)}
-          <h4>Speed {monster[0].speed.walk}</h4> */}
+          <p></p>
+          <p>Speed ({monster[0].speed.walk}) fly ({monster[0].speed.fly}) swim ({monster[0].speed.swim}) climb ({monster[0].speed.climb})</p>
           {/* COME BACK AND FIX SPEED */}
-          <ul>
-            <li>Strength {monster[0].strength}</li>
-            <li>Dexterity {monster[0].dexterity}</li>
-            <li>Constitution {monster[0].constitution}</li>
-            <li>Intelligence {monster[0].intelligence}</li>
-            <li>Wisdom {monster[0].wisdom}</li>
-            <li>Charisma {monster[0].charisma}</li>
+          <ul className='stats'>
+            <li className='stat'>Strength {monster[0].strength}
+                <li>({Math.trunc((monster[0].strength-10)/2)})</li>
+            </li>
+            <li className='stat'>Dexterity {monster[0].dexterity}
+                <li>({Math.trunc((monster[0].dexterity-10)/2)})</li>
+            </li>
+            <li className='stat'>Constitution {monster[0].constitution}
+            <li>({Math.trunc((monster[0].constitution-10)/2)})</li>
+            </li>
+            <li className='stat'>Intelligence {monster[0].intelligence}
+                <li>({Math.trunc((monster[0].intelligence-10)/2)})</li>
+            </li>
+            <li className='stat'>Wisdom {monster[0].wisdom}
+                <li>({Math.trunc((monster[0].wisdom-10)/2)})</li>
+            </li>
+            <li className='stat'>Charisma {monster[0].charisma}
+                <li>({Math.trunc((monster[0].charisma-10)/2)})</li>
+            </li>
+          </ul>
+          <ul className='stats'>
+            <li className='stat'>Challenge {monster[0].challenge_rating}</li>
+            <li className='stat'>Profieciency Bonus {Math.ceil(((monster[0].challenge_rating)/4)+1) || 2}</li>
           </ul>
           <h4>Actions</h4>
           <b>{monster[0].actions[0].name}</b>

@@ -9,6 +9,7 @@ a {
 }
 
 body {
+  text-align: center;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -90,7 +91,7 @@ header a {
 
 .details {
   padding: 1rem;
-  width: 350px;
+  width: fit-content;
   background-color: antiquewhite;
 }
 
@@ -123,3 +124,11 @@ header a {
   padding: 1rem;
 }
 
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+.stat {
+  margin-inline: 10px;
+}
