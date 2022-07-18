@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import React, { useState, useEffect } from 'react';
 import beholder from '../beholder.svg'
+import dots from '../3-dots-bounce.svg'
 
 const Cards = (props) => {
     //passing props from App.js to determine which URL we are using.
@@ -18,10 +19,11 @@ const url = 'https://api.open5e.com/monsters/' + props.url
         setMonsters(json.results)
       })
       .catch(err => console.log(err))
-  })
+  }, []);
 
   if (!monsters) {
-    return <p>loading information...</p>
+    return <><p>loading information</p> <img className='card-art'
+    src={dots} alt="dots"/></>
   }
 
     return (
