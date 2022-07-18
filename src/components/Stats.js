@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import dot from '../3-dots-bounce.svg'
+import Breakline from './Breakline';
 
 const Stats = () => {
 
@@ -24,6 +25,8 @@ const Stats = () => {
           .catch(err => console.err)
       }, []);
       
+      let monst = monster[0]
+
       if (!monster[0]) {
         return <><h1>Fetching monsters</h1> <img className='card-art'
         src={dot} alt="dots"/></>
@@ -32,40 +35,53 @@ const Stats = () => {
     return (
         <div className="details-container">
         <div className="details">
-          <h2>{monster[0].name}</h2>
-          <h3>{monster[0].size} {monster[0].type}, {monster[0].alignment}</h3>
-          <h4>Armor Class {monster[0].armor_class} ({monster[0].armor_desc})</h4>
-          <h4>Hit Points {monster[0].hit_points} ({monster[0].hit_dice})</h4>
-          <p></p>
-          <p>Speed ({monster[0].speed.walk}) fly ({monster[0].speed.fly}) swim ({monster[0].speed.swim}) climb ({monster[0].speed.climb})</p>
+          <h2>{monst.name}</h2>
+          <h3>{monst.size} {monst.type}, {monst.alignment}</h3>
+          <Breakline/>
+          <h4 className='stat-left'>Armor Class {monst.armor_class} ({monst.armor_desc})</h4>
+          <h4 className='stat-left'>Hit Points {monst.hit_points} ({monst.hit_dice})</h4>
+          <h4 className='stat-left'>Speed ({monst.speed.walk})
+           Fly ({monst.speed.fly}) Swim ({monst.speed.swim}) Climb ({monst.speed.climb}) </h4>
+          <Breakline/>
           {/* COME BACK AND FIX SPEED */}
           <ul className='stats'>
-            <li className='stat'>Strength {monster[0].strength}
-                <li>({Math.trunc((monster[0].strength-10)/2)})</li>
+            {/* Ability Score */}
+            <li className='stat'>Strength {monst.strength}
+                {/* Modifier */}
+                <p>({Math.trunc((monst.strength-10)/2)})</p>
             </li>
-            <li className='stat'>Dexterity {monster[0].dexterity}
-                <li>({Math.trunc((monster[0].dexterity-10)/2)})</li>
+            <li className='stat'>Dexterity {monst.dexterity}
+                <p>({Math.trunc((monst.dexterity-10)/2)})</p>
             </li>
-            <li className='stat'>Constitution {monster[0].constitution}
-            <li>({Math.trunc((monster[0].constitution-10)/2)})</li>
+            <li className='stat'>Constitution {monst.constitution}
+            <p>({Math.trunc((monst.constitution-10)/2)})</p>
             </li>
-            <li className='stat'>Intelligence {monster[0].intelligence}
-                <li>({Math.trunc((monster[0].intelligence-10)/2)})</li>
+            <li className='stat'>Intelligence {monst.intelligence}
+                <p>({Math.trunc((monst.intelligence-10)/2)})</p>
             </li>
-            <li className='stat'>Wisdom {monster[0].wisdom}
-                <li>({Math.trunc((monster[0].wisdom-10)/2)})</li>
+            <li className='stat'>Wisdom {monst.wisdom}
+                <p>({Math.trunc((monst.wisdom-10)/2)})</p>
             </li>
-            <li className='stat'>Charisma {monster[0].charisma}
-                <li>({Math.trunc((monster[0].charisma-10)/2)})</li>
+            <li className='stat'>Charisma {monst.charisma}
+                <p>({Math.trunc((monst.charisma-10)/2)})</p>
             </li>
           </ul>
+          <Breakline/>
+          <h4 className='stat-left'>Challenge {monst.challenge_rating}</h4>
           <ul className='stats'>
-            <li className='stat'>Challenge {monster[0].challenge_rating}</li>
-            <li className='stat'>Profieciency Bonus {Math.ceil(((monster[0].challenge_rating)/4)+1) || 2}</li>
+            <li className='stat'>Damage Vulnerabilities ({monst.damage_vulnerabilities})</li>
+            <li className='stat'>Damage Resistances ({monst.damage_resistances})</li>
+            <li className='stat'>Damage Immunities ({monst.damage_immunities})</li>
+            <li className='stat'>Condition Immunities ({monst.condition_immunities})</li>
+            <li className='stat'>Senses ({monst.senses})</li>
+            <li className='stat'>Languages ({monst.languages})</li>
           </ul>
-          <h4>Actions</h4>
-          <b>{monster[0].actions[0].name}</b>
-          <p>{monster[0].actions[0].desc}</p>
+          <h4 className='stat-left'>Profieciency Bonus {Math.ceil(((monst.challenge_rating)/4)+1) || 2}</h4>
+
+          <Breakline/>
+          <h2>Actions</h2>
+          <b>{monst.actions[0].name}</b>
+          <p>{monst.actions[0].desc}</p>
           <a
             href={"https://www.dndbeyond.com/monsters/" + monster[0].slug}
             target="_blank"

@@ -24,6 +24,11 @@ h1 {
   font-weight: 300;
   margin: 0;
 }
+h2 {
+  font-family: 'Noto Serif', Georgia, serif;
+  font-weight: 100;
+  margin: 0;
+}
 
 header {
   background-color: black;
@@ -126,9 +131,26 @@ header a {
 
 .stats {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: flex-start;
   list-style: none;
 }
 .stat {
   margin-inline: 10px;
+}
+.stat-proficient {
+  margin-inline: 10px;
+  display: flex;
+  justify-content: end;
+}
+.stat-left {
+  margin-inline: 10px;
+  display: flex;
+  justify-content: start;
+}
+
+.breakline {
+  display: flex;
+  border-top: #993030;
+  border-style: solid;
+  border-radius: 50%;
 }
