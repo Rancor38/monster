@@ -9,7 +9,6 @@ a {
 }
 
 body {
-  text-align: center;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -18,7 +17,7 @@ body {
 
 h1 {
   font-family: 'Noto Serif', Georgia, serif;
-  font-weight: 300;
+  font-weight: 400;
   margin: 0;
 }
 h2 {
@@ -30,6 +29,7 @@ h2 {
 }
 
 header {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -92,25 +92,34 @@ main {
 .detcontainer {
   padding-inline: 25%;
   background-color: antiquewhite;
+  flex-direction: column;
+  margin: auto;
+  box-shadow: 2px 3px 20px black, 0 0 60px #8a4d0f inset;
+    background: #fffef0;
 }
 
 .read-more {
   text-decoration: none;
-  background-color: black;
-  color: white;
-  display: inline-block;
-  margin: 1rem 0;
-  padding: 1rem;
+  color: rgb(0, 64, 255);
+  padding-bottom: 1rem;
 }
 
 .stats {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
+  text-align: center;
   list-style: none;
 }
+.ability-scores {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 100px;
+  text-align: center;
+  list-style: none; 
+  padding: 0;
+}
 .stat {
-  margin-inline: 10px;
+  margin-inline: 1px;
+  width: 100px;
+  /* border-bottom: solid; */
 }
 .stat-proficient {
   margin-inline: 10px;
@@ -138,10 +147,34 @@ main {
 text-align: left;
 text-indent: 2rem;
 }
+.center-title {
+  text-align: center;
+  padding-top: 2rem;
+}
 
-@media screen and (max-width: 800px){
+@media screen and (min-width: 800px){
   .details-container {
     width: 100%;
     align-items: center;
+  }
+  .ability-scores {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 500px){
+  .ability-scores {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+      background: rgb(40, 40, 40);
+  }
+  h1 {
+    color: white;
   }
 }
