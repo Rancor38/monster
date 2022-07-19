@@ -2,14 +2,17 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
-        <header>
-            <h1>
-                <Link to='/'>Find Monsters</Link> 
-            </h1>
+        <>
+        <h1>Monster Finder</h1>
+        <header>    
             <h2>
+                <Link to='/'>Find Monsters</Link> 
+            </h2>
+            <h2 >
                 <Link to='/about'>About</Link>
             </h2>
         </header>
+        </>
     );
 };
 

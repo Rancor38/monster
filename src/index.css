@@ -28,9 +28,14 @@ h2 {
   font-family: 'Noto Serif', Georgia, serif;
   font-weight: 100;
   margin: 0;
+  border-bottom-style: solid;
+  border-radius: 20%;
 }
 
 header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   background-color: black;
   color: white;
   padding: 1rem;
@@ -70,7 +75,7 @@ header a {
 }
 
 .card-title {
-  background-color: #276074;
+  background-color: #742727;
   color: white;
   border-radius: 0 0 1rem 1rem;
   margin: 0;
@@ -82,11 +87,14 @@ header a {
   font-weight: 300;
 }
 
-.details-container {
-  align-items: center;
+main {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+}
+
+.details-container {
+  width: 60%;
+  align-items: center;
 }
 
 .details-image {
@@ -131,6 +139,7 @@ header a {
 
 .stats {
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-start;
   list-style: none;
 }
@@ -153,4 +162,15 @@ header a {
   border-top: #993030;
   border-style: solid;
   border-radius: 50%;
+}
+.action {
+text-align: left;
+text-indent: 2rem;
+}
+
+@media screen and (max-width: 800px){
+  .details-container {
+    width: 100%;
+    align-items: center;
+  }
 }

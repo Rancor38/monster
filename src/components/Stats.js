@@ -12,7 +12,6 @@ const Stats = () => {
     // Snagging the url as a parameter
     const { name } = useParams();
     // transforming the parameter into lowercase because the names use case sensitivity, and the slugs don't work because the API made a mistake, they use the names, which yes, does include unsightly URLs in the address. 
-
    
     // Creating side effects in the DOM.
     useEffect(() => {
@@ -25,7 +24,9 @@ const Stats = () => {
           .catch(err => console.err)
       }, []);
       
-      let monst = monster[0]
+      const monst = monster[0]
+
+     
 
       if (!monster[0]) {
         return <><h1>Fetching monsters</h1> <img className='card-art'
@@ -78,10 +79,22 @@ const Stats = () => {
           </ul>
           <h4 className='stat-left'>Profieciency Bonus {Math.ceil(((monst.challenge_rating)/4)+1) || 2}</h4>
 
+          <Breakline/>         
+          <h3 className='details h3'>Actions</h3>
+          <b>Attacks</b>
+          <p>Attacks with which the {monst.name.toLowerCase()} is proficient are +{(Math.ceil(((monst.challenge_rating)/4)+1) || 2)+5} to hit.</p>
+          <p>Abilities that trigger saving throws are DC {(Math.ceil(((monst.challenge_rating)/4)+1) || 2)+13} to save.</p>
+          <b>Special Abilities</b>
+          {/* <b>{monst.actions[0].name}</b>
+          <p className='action'>{monst.actions[0].desc}</p>
+          <b>{monst.actions[1].name}</b>
+          <p className='action'>{monst.actions[1].desc}</p>
+          <b>{monst.actions[2].name}</b>
+          <p className='action'>{monst.actions[2].desc}</p>
+          <b>{monst.actions[3].name}</b>
+          <p className='action'>{monst.actions[3].desc}</p> */}
+          {/* FIND A WAY TO PRINT WITHOUT IT BREAKING */}
           <Breakline/>
-          <h2>Actions</h2>
-          <b>{monst.actions[0].name}</b>
-          <p>{monst.actions[0].desc}</p>
           <a
             href={"https://www.dndbeyond.com/monsters/" + monster[0].slug}
             target="_blank"
