@@ -33,6 +33,8 @@ In the end I created 5 componants that plug into the App component: About, Cards
 
 Then the code started. I needed to refresh myself on API's. The API I picked turned out to be fairly easy to navigate, with one minor hickup, since the docs describe the url as using the slug key, when in fact it uses the name key. This means that some urls have spaces which I had to learn by trial and error, playing around with "what might have happened" with error messages only telling my "x is undefined".
 
+Another thing that tripped me up was the Synchronous Fetch Request, it meant that for the Stats component I had to add some kind of delay to make sure the page didn't turn blank due to failing to load the page on load. This is why the Stats page has a 3 dots file to display when it's loading.
+
 One key change between the wireframes and the final product is the component hierarchy. I actually placed my State into Cards and not the App, and connected each component to app via Cards. I found this was a better way to get the state passed between Cards and Stats, rather than needing to pass it between Cards, Stats, and App. Also Header and About are static components and didn't need state so I chose to  not pass to them what they don't need.
 
 Once navigating the API fetch request was complete, actually placing Links, React-Router, State, all took a very long day of refreshing, but I did learn a lot aong the way.
