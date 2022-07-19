@@ -5,7 +5,9 @@ When you first enter the sight, every single monster in the 5e System Reference 
 
 ## PICTURES OF WEBSITE HERE
 
-![alt text](https://github.com/rancor38/MONSTER FINDER/blob/main/readme-bio.png?raw=true)
+![alt text](https://github.com/Rancor38/monster/blob/main/Screenshot%201.png?raw=true)
+![alt text](https://github.com/Rancor38/monster/blob/main/Screenshot%202.png?raw=true)
+![alt text](https://github.com/Rancor38/monster/blob/main/Screenshot%203.png?raw=true)
 
 ## TECHNOLOGIES USED
 The application is built in React, and uses HTML, CSS, JavaScript, the Open5e API, React Router, and might use Bootstrap in a future update.
@@ -42,7 +44,7 @@ Edit// Revisiting this I had a lot of edits to make to the nav-bar for different
 
 Edit// Added an overlay to the page in case I run out of time to include interacting requirements. I'll try to find something more fun to replace it with.
 
-[CLICK THIS LINK TO VISIT THE LIVE SITE](https://zakariah.xyz/)
+[CLICK THIS LINK TO VISIT THE LIVE SITE](https://monster-finders.netlify.app/)
 
 ## THE FUTURE ON MONSTER FINDER
 
