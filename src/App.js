@@ -9,7 +9,7 @@ const App = () => {
   return (
     <div className="App">
       <Header />
-<main>
+<>
     <Routes>
       <Route path='/' element={ 
         //start of fragment
@@ -39,10 +39,12 @@ const App = () => {
       // end of fragment
       }/>
       <Route path='/about' element={<About/>}/>
-      <Route path='stats/:name' element={<Stats /> }/>
-    </Routes>
-</main>
       
+    </Routes>
+</>
+    <Routes>
+    <Route path='stats/:name' element={<Stats /> }/>
+    </Routes>  
     </div>
   );
 }

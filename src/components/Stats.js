@@ -34,8 +34,7 @@ const Stats = () => {
       }
 
     return (
-        <div className="details-container">
-        <div className="details">
+        <div className="detcontainer">
           <h2>{monst.name}</h2>
           <h3>{monst.size} {monst.type}, {monst.alignment}</h3>
           <Breakline/>
@@ -80,7 +79,7 @@ const Stats = () => {
           <h4 className='stat-left'>Profieciency Bonus {Math.ceil(((monst.challenge_rating)/4)+1) || 2}</h4>
 
           <Breakline/>         
-          <h3 className='details h3'>Actions</h3>
+          <h3 className='stat-center'>Actions</h3>
           <b>Attacks</b>
           <p>Attacks with which the {monst.name.toLowerCase()} is proficient are +{(Math.ceil(((monst.challenge_rating)/4)+1) || 2)+5} to hit.</p>
           <p>Abilities that trigger saving throws are DC {(Math.ceil(((monst.challenge_rating)/4)+1) || 2)+13} to save.</p>
@@ -95,14 +94,13 @@ const Stats = () => {
           <p className='action'>{monst.actions[3].desc}</p> */}
           {/* FIND A WAY TO PRINT WITHOUT IT BREAKING */}
           <Breakline/>
-          <a
+          <h4 className='stat-center'><a
             href={"https://www.dndbeyond.com/monsters/" + monster[0].slug}
             target="_blank"
             rel="noopener noreferrer"
           >
             Read More
-          </a>
-        </div>
+          </a></h4>
       </div>
     );
 };
