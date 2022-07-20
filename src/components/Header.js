@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import SearchForm from './SearchForm';
 
 const Header = () => {
     return (
@@ -8,9 +9,11 @@ const Header = () => {
             <h2>
                 <Link to='/'>Find Monsters</Link> 
             </h2>
+            <SearchForm />
             <h2 >
                 <Link to='/about'>About</Link>
             </h2>
+            
         </header>
         </>
     );
