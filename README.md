@@ -10,7 +10,7 @@ When you first enter the site, every single monster in the 5e System Reference D
 ![alt text](https://github.com/Rancor38/monster/blob/main/Screenshot%203.png?raw=true)
 
 ## TECHNOLOGIES USED
-The application is built in React, and uses HTML, CSS, JavaScript, the (https://open5e.com/ "Open5e API"), React Router, and might use Bootstrap in a future update.
+The application is built in React, and uses HTML, CSS, JavaScript, the [Title](https://open5e.com/ "Open5e API"), React Router, and might use Bootstrap in a future update.
 
 INSTALLATION INSTRUCTIONS
 All you need to work MONSTER FINDER is a modern web browser and you're good to go!
