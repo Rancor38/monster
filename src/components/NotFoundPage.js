@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const NotFoundPage = () => {
     return <div>
-              <Link to="/">Err 404, page not found</Link>
+              <Link to="/">Err fetch failed, results not found</Link>
           </div>;
 };
 

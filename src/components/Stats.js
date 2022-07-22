@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import dot from '../3-dots-bounce.svg'
-import Breakline from './Breakline';
-import { Link } from 'react-router-dom'
+import Breakline from './stats-components/Breakline';
+import EmbededImage from './EmbededImage';
 
 const Stats = () => {
 
@@ -36,8 +36,11 @@ const Stats = () => {
 
     return (
         <>
-            <div className="detcontainer">
+          <div className="detcontainer">
           <h2 className='center-title'>{monst.name}</h2>
+          <EmbededImage 
+          monPicSelector={monster[0].slug + '.jpg'}
+          />
           <h3>{monst.size} {monst.type}, {monst.alignment}</h3>
           <Breakline/>
           <h4 className='stat-left'>Armor Class {monst.armor_class} ({monst.armor_desc})</h4>

@@ -10,3 +10,8 @@ Maybe, the first step is to place the current URL for the cards component into a
 Then I need to make the cards able to take a URL that is input as the end of the Search URL within the search box.
 The following is a Search URL I can use as my example, it wil retrun a search fo 'fire' within the SRD.
 https://api.open5e.com/search/?document_slug=wotc-srd&text=fire
+
+https://www.dndbeyond.com/avatars/thumbnails/0/11/1000/1000/636238825975375671.jpeg
+https://www.dndbeyond.com/attachments/2/656/humanoid.jpg
+
+Pulled image of monsters from https://www.aidedd.org/dnd-filters/monsters.php
