@@ -6,34 +6,45 @@ import Stats from './components/Stats';
 
 const App = () => {
 
+  // Const variables for the SRD Monsters, these will be passed down as props to the Cards component as 'url'.
+  let srdUrl = 'https://api.open5e.com/monsters/?document__slug=wotc-srd'
+
+  // If the searchform has x content in it, x content becomes appended to the end of the following url
+
+  if (/*searchbox has searched a thing*/ true) {
+    let srdUrl = 'https://api.open5e.com/monsters/?document__slug=wotc-srd&search='/*+ searchbox text*/
+  }
+
   return (
     <div className="App">
+{/* Printing the Header Component within the App */}
       <Header />
 <>
+{/* Printing the Card element for each page of results from the API, with each having a route */}
     <Routes>
       <Route path='/' element={ 
         //start of fragment
       <>
       <Cards 
-      url={'?document__slug=wotc-srd'}
+      url={srdUrl}
       />
       <Cards 
-      url={'?document__slug=wotc-srd&page=2'}
+      url={srdUrl+'&page=2'}
       />
       <Cards 
-      url={'?document__slug=wotc-srd&page=3'}
+      url={srdUrl+'&page=3'}
       />
       <Cards 
-      url={'?document__slug=wotc-srd&page=4'}
+      url={srdUrl+'&page=4'}
       />
       <Cards 
-      url={'?document__slug=wotc-srd&page=5'}
+      url={srdUrl+'&page=5'}
       />
       <Cards 
-      url={'?document__slug=wotc-srd&page=6'}
+      url={srdUrl+'&page=6'}
       />
       <Cards 
-      url={'?document__slug=wotc-srd&page=7'}
+      url={srdUrl+'&page=7'}
       />
       </>
       // end of fragment
@@ -42,6 +53,7 @@ const App = () => {
       
     </Routes>
 </>
+{/* A separate route to give the stats component, and render it to the app when one of the card elements are clicked. */}
     <Routes>
     <Route path='stats/:name' element={<Stats /> }/>
     </Routes>  

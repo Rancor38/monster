@@ -5,7 +5,7 @@ import dot from '../3-dots-bounce.svg'
 
 const Cards = (props) => {
     //passing props from App.js to determine which URL we are using.
-const url = 'https://api.open5e.com/monsters/' + props.url
+const url = props.url
   //Creating some State
   const [monsters, setMonsters] = useState([]);
 

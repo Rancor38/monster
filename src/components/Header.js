@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import SearchForm from './SearchForm';
+import FilterForm from './FilterForm';
 
 const Header = () => {
     return (
@@ -9,7 +9,7 @@ const Header = () => {
             <h2>
                 <Link to='/'>Find Monsters</Link> 
             </h2>
-            <SearchForm />
+            {/* <FilterForm />  Comment me in to activate FilterForm search*/}
             <h2 >
                 <Link to='/about'>About</Link>
             </h2>
