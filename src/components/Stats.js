@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import dot from '../3-dots-bounce.svg'
 import Breakline from './Breakline';
+import { Link } from 'react-router-dom'
 
 const Stats = () => {
 

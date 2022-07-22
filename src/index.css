@@ -151,6 +151,10 @@ text-indent: 2rem;
   text-align: center;
   padding-top: 2rem;
 }
+.github {
+  width: 20px;
+  height: 20px;
+}
 
 @media screen and (min-width: 800px){
   .details-container {
