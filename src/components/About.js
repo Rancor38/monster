@@ -10,7 +10,7 @@ const About = () => {
         
         </main>
         <h4 className='stat-center'><a className='read-more'
-            href={"https://www.dndbeyond.com/monsters/"}
+            href={"https://github.com/Rancor38/monster"}
             target="_blank"
             rel="noopener noreferrer"
           >
