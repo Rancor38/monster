@@ -28,8 +28,7 @@ These were the concepts for the site I created in Google Slides.
 
 ## APPROACH TAKEN
 I started off with a page for pseudocode and user-stories. I usually place these into the application, but here I put a lot of it into my project proposal, and used wireframes as a guide for components.
-
-In the end I created 5 componants that plug into the App component: About, Cards, Header, Stats, and Breakline. Breakline was the last of these components to implement, and it is the begining of a course to break down the Stats component into more sub-components down the line.
+The gist of the app is 5 componants that plug into the App component: About, Cards, Header, Stats, and Breakline. Breakline was the last of these components to implement, and it is the begining of a course to break down the Stats component into more sub-components down the line.
 
 Then the code started. I needed to refresh myself on API's. The API I picked turned out to be fairly easy to navigate, with one minor hickup, since the docs describe the url as using the slug key, when in fact it uses the name key. This means that some urls have spaces which I had to learn by trial and error, playing around with "what might have happened" with error messages only telling my "x is undefined".
 
