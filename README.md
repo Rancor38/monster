@@ -1,7 +1,7 @@
 # MONSTER FINDER
 
 MONSTER FINDER is an application for finding monsters to use in your 5th Edition roleplaying game. 
-When you first enter the sight, every single monster in the 5e System Reference Document (SRD) will be displayed before you in alphabetical order. Select one of the monsters you would like, and the basic information about that monster will come up, along with a dynamically rendered resource link to the official page for that monster on Wizards of the Caost's website.
+When you first enter the site, every single monster in the 5e System Reference Document (SRD) will be displayed before you in alphabetical order. Select one of the monsters you would like, and the basic information about that monster will come up, along with a dynamically rendered resource link to the official page for that monster on Wizards of the Caost's website.
 
 ## PICTURES OF WEBSITE HERE
 
