@@ -27,7 +27,7 @@ These were the concepts for the site I created in Google Slides.
 ![alt text](https://github.com/Rancor38/monster/blob/main/proposal/wireframes/Wireframe%203.png?raw=true)
 
 ## APPROACH TAKEN
-I started off with a page for pseudocode and user-stories. I usually place these into the opplication, but here I put a lot of it into my project proposal, and used wireframes as a guide for components.
+I started off with a page for pseudocode and user-stories. I usually place these into the application, but here I put a lot of it into my project proposal, and used wireframes as a guide for components.
 
 In the end I created 5 componants that plug into the App component: About, Cards, Header, Stats, and Breakline. Breakline was the last of these components to implement, and it is the begining of a course to break down the Stats component into more sub-components down the line.
 
