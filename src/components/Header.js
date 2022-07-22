@@ -9,7 +9,7 @@ const Header = () => {
             <h2>
                 <Link to='/'>Find Monsters</Link> 
             </h2>
-            {/* <FilterForm />  Comment me in to activate FilterForm search*/}
+            {/* <FilterForm /> */}
             <h2 >
                 <Link to='/about'>About</Link>
             </h2>

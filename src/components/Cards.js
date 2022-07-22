@@ -1,13 +1,20 @@
-import { Link } from 'react-router-dom'
+import { Link, Routes, Route } from 'react-router-dom'
 import React, { useState, useEffect } from 'react';
 import dragon from '../dragon.svg'
 import dot from '../3-dots-bounce.svg'
+import NotFoundPage from './NotFoundPage';
 
 const Cards = (props) => {
     //passing props from App.js to determine which URL we are using.
 const url = props.url
   //Creating some State
   const [monsters, setMonsters] = useState([]);
+
+const errorFunction = () => {
+  <Routes>
+    <Route path='*' element={<NotFoundPage/>}/>
+  </Routes>
+}
 
   //pulling useEffect in here to manipulate the DOM.
 
@@ -18,7 +25,9 @@ const url = props.url
       .then((json) => {
         setMonsters(json.results)
       })
-      .catch(err => console.err)
+      .catch(err => {
+        errorFunction()
+      })
   }, []);
 
   if (!monsters) {

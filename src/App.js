@@ -50,8 +50,8 @@ const App = () => {
       // end of fragment
       }/>
       <Route path='/about' element={<About/>}/>
-      
     </Routes>
+   
 </>
 {/* A separate route to give the stats component, and render it to the app when one of the card elements are clicked. */}
     <Routes>
