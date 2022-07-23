@@ -1,5 +1,8 @@
 import React from 'react';
-import dragon from '../images/beast.svg'
+import beast from '../images/beast.svg'
+import humanoid from '../images/human.svg'
+import commoner from '../images/commoner.svg'
+import { humanoidSlugs, commonerSlug } from '../monster-arrays/HumanoidArray';
 import {blackDragonSlugs, blueDragonSlugs, brassDragonSlugs, bronzeDragonSlugs, copperDragonSlugs, goldDragonSlugs, greenDragonSlugs, redDragonSlugs, silverDragonSlugs, whiteDragonSlugs} from '../monster-arrays/DragonArray';
 
 // A short tag to not repeat url source of images.
@@ -90,16 +93,30 @@ const EmbededImage = ({monPicSelector}) => {
         )
     }
     // if a humanoid
-    
+    if(humanoidSlugs.includes(monPicSelector)===true) {
+        return (
+        <main>
+            <img src={humanoid} alt='monster' className='embeded-image'/>
+        </main> 
+        )
+    }
+    // if a commoner
+    if(commonerSlug.includes(monPicSelector)===true) {
+        return (
+        <main>
+            <img src={commoner} alt='monster' className='embeded-image'/>
+        </main> 
+        )
+    }
 // else when not a dragon images are the function below
     return (
         <main>
-        {/* An image that on an error uses a default image */}
+        {/* An image from image-source that on an error uses a default beast-image */}
             <img src={(monUrl + monPicSelector)} alt='monster' className='embeded-image' onError={({ currentTarget }) =>{
                 // To stop it from looping, null
                 currentTarget.onerror = null;
-                // Target of image.
-                currentTarget.src=dragon;
+                // Target of image, becomes beast if no other source
+                currentTarget.src=beast;
             }}/>
         </main>
     );
