@@ -157,9 +157,10 @@ text-indent: 2rem;
 }
 .embeded-image {
   padding-top: 10px;
-  max-width: fit-content;
-  max-height: 50vh;
+  max-width: 250px;
+  max-height: 250px;
   mix-blend-mode: multiply;
+  border-radius: 20%;
 }
 
 @media screen and (min-width: 800px){
