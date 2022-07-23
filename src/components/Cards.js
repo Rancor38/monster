@@ -1,6 +1,5 @@
 import { Link, Routes, Route } from 'react-router-dom'
 import React, { useState, useEffect } from 'react';
-import dragon from '../dragon.svg'
 import dot from '../3-dots-bounce.svg'
 import NotFoundPage from './NotFoundPage';
 import EmbededImage from './EmbededImage';
