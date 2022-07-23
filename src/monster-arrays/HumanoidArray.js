@@ -1,2 +1,2 @@
-export const humanoidSlugs = ['acolyte.jpg', 'assassin.jpg', 'bandit.jpg', 'berserker.jpg', 'cultist.jpg', 'deep-gnome-svirfneblin.jpg', 'gladiator.jpg', 'half-red-dragon-veteran.jpg', 'priest.jpg', 'spy.jpg', 'tribal-warrior.jpg', 'veteran.jpg', 'guard.jpg', 'knight', 'mage']
+export const humanoidSlugs = ['acolyte.jpg', 'assassin.jpg', 'bandit.jpg', 'berserker.jpg', 'cultist.jpg', 'deep-gnome-svirfneblin.jpg', 'gladiator.jpg', 'half-red-dragon-veteran.jpg', 'priest.jpg', 'spy.jpg', 'tribal-warrior.jpg', 'veteran.jpg', 'guard.jpg', 'knight.jpg', 'mage.jpg']
 export const commonerSlug = ['commoner.jpg']
