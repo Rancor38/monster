@@ -12,11 +12,12 @@ const Stats = () => {
     const [monster, setMonster] = useState([]);
     // Snagging the url as a parameter
     const { name } = useParams();
-    // transforming the parameter into lowercase because the names use case sensitivity, and the slugs don't work because the API made a mistake, they use the names, which yes, does include unsightly URLs in the address. 
+    
    
     // Creating side effects in the DOM.
     useEffect(() => {
-     let lowercase = name.toLocaleLowerCase()    
+     let lowercase = name.toLocaleLowerCase()  
+     // transforming the parameter into lowercase because the names use case sensitivity, and the slugs don't work because the API made a mistake, they use the names, which yes, does include unsightly URLs in the address.
         fetch(url + lowercase)
           .then((res) => res.json())
           .then((json) => {
@@ -26,8 +27,6 @@ const Stats = () => {
       }, []);
       
       const monst = monster[0]
-
-     
 
       if (!monster[0]) {
         return <><h1>Fetching monsters</h1> <img className='card-art'

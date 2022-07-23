@@ -1,0 +1,1 @@
+export const lycanthropeSlug = ['werebear.jpg', 'werewolf.jpg', 'wererat.jpg', 'weretiger.jpg', 'wereboar.jpg']

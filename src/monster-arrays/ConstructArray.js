@@ -1,0 +1,1 @@
+export const constructSlug = ['rug-of-smothering.jpg']

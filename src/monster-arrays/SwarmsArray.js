@@ -1,0 +1,1 @@
+export const swarmsSlug = ['swarm-of-bats.jpg', 'swarm-of-beetles.jpg', 'swarm-of-centipedes.jpg', 'swarm-of-insects.jpg', 'swarm-of-poisonous-snakes.jpg', 'swarm-of-quippers.jpg', 'swarm-of-rats.jpg', 'swarm-of-ravens.jpg', 'swarm-of-spiders.jpg', 'swarm-of-wasps.jpg']

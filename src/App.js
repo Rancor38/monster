@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 import Cards from './components/Cards';
 import Header from './components/Header';
 import About from './components/About';
@@ -56,6 +56,8 @@ const App = () => {
 {/* A separate route to give the stats component, and render it to the app when one of the card elements are clicked. */}
     <Routes>
     <Route path='stats/:name' element={<Stats /> }/>
+    <Route path='stats/Succubus/Incubus' element={() => {window.location.href = 'https://monster-finders.netlify.app/stats/succubus/'
+    }}/>
     </Routes>  
     </div>
   );

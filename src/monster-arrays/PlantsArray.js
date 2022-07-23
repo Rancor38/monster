@@ -1,0 +1,1 @@
+export const plantsSlug = ['awakened-shrub.jpg', 'awakened-tree.jpg']

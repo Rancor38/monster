@@ -43,7 +43,8 @@ const errorFunction = () => {
             src={dot} alt="dots"/></>
           }
             return (
-    <Link to={`stats/${monster.name}`} key={monster.name.toString()} className="card">
+              // A Link to stats/the name of the monster unless its succubus because the name succubus/incubus breaks it, so when it sees that it'll turn it into 'succubus'
+    <Link to={`stats/${monster.name==='Succubus/Incubus' ? 'succubus' : monster.name}`} key={monster.name.toString()} className="card">
     <div className="card-image">
       <div >
         <EmbededImage className='card-art' monPicSelector={monster.slug + '.jpg'}/>

@@ -1,9 +1,22 @@
 import React from 'react';
+// import placeholders for missing images
 import beast from '../images/beast.svg'
 import humanoid from '../images/human.svg'
 import commoner from '../images/commoner.svg'
+import lycanthrope from '../images/lycanthrope.svg'
+import swarm from '../images/swarm.svg'
+import plants from '../images/plant.svg'
+import construct from '../images/construct.svg'
+import fiend from '../images/feind.svg'
+import succubus from '../images/succubus.svg'
+// import arrays of variables
 import { humanoidSlugs, commonerSlug } from '../monster-arrays/HumanoidArray';
 import {blackDragonSlugs, blueDragonSlugs, brassDragonSlugs, bronzeDragonSlugs, copperDragonSlugs, goldDragonSlugs, greenDragonSlugs, redDragonSlugs, silverDragonSlugs, whiteDragonSlugs} from '../monster-arrays/DragonArray';
+import { lycanthropeSlug } from '../monster-arrays/LycanthropeArray';
+import { swarmsSlug } from '../monster-arrays/SwarmsArray';
+import { plantsSlug } from '../monster-arrays/PlantsArray';
+import { constructSlug } from '../monster-arrays/ConstructArray';
+import { fiendSlug, succubusSlug } from '../monster-arrays/FiendArray';
 
 // A short tag to not repeat url source of images.
 const monUrl = 'https://www.aidedd.org/dnd/images/'
@@ -105,6 +118,49 @@ const EmbededImage = ({monPicSelector}) => {
         return (
         <main>
             <img src={commoner} alt='monster' className='embeded-image'/>
+        </main> 
+        )
+    }
+    // if lycanthrope
+    if(lycanthropeSlug.includes(monPicSelector)===true) {
+        return (
+        <main>
+            <img src={lycanthrope} alt='monster' className='embeded-image'/>
+        </main> 
+        )
+    }
+    if(swarmsSlug.includes(monPicSelector)===true) {
+        return (
+        <main>
+            <img src={swarm} alt='monster' className='embeded-image'/>
+        </main> 
+        )
+    }
+    if(plantsSlug.includes(monPicSelector)===true) {
+        return (
+        <main>
+            <img src={plants} alt='monster' className='embeded-image'/>
+        </main> 
+        )
+    }
+    if(constructSlug.includes(monPicSelector)===true) {
+        return (
+        <main>
+            <img src={construct} alt='monster' className='embeded-image'/>
+        </main> 
+        )
+    }
+    if(fiendSlug.includes(monPicSelector)===true) {
+        return (
+        <main>
+            <img src={fiend} alt='monster' className='embeded-image'/>
+        </main> 
+        )
+    }
+    if(succubusSlug.includes(monPicSelector)===true) {
+        return (
+        <main>
+            <img src={succubus} alt='monster' className='embeded-image'/>
         </main> 
         )
     }
