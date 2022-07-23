@@ -129,6 +129,7 @@ const EmbededImage = ({monPicSelector}) => {
         </main> 
         )
     }
+    // if swarms
     if(swarmsSlug.includes(monPicSelector)===true) {
         return (
         <main>
@@ -136,6 +137,7 @@ const EmbededImage = ({monPicSelector}) => {
         </main> 
         )
     }
+    // if plant
     if(plantsSlug.includes(monPicSelector)===true) {
         return (
         <main>
@@ -143,6 +145,7 @@ const EmbededImage = ({monPicSelector}) => {
         </main> 
         )
     }
+    // if construct
     if(constructSlug.includes(monPicSelector)===true) {
         return (
         <main>
@@ -150,6 +153,7 @@ const EmbededImage = ({monPicSelector}) => {
         </main> 
         )
     }
+    // if fiend
     if(fiendSlug.includes(monPicSelector)===true) {
         return (
         <main>
@@ -157,6 +161,7 @@ const EmbededImage = ({monPicSelector}) => {
         </main> 
         )
     }
+    // if succubus
     if(succubusSlug.includes(monPicSelector)===true) {
         return (
         <main>
