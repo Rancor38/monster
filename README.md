@@ -6,8 +6,7 @@ When you first enter the site, every single monster in the 5e System Reference D
 ## PICTURES OF WEBSITE HERE
 
 ![alt text](https://github.com/Rancor38/monster/blob/main/Screenshot%202022-09-03%20at%201.06.18%20AM.png?raw=true)
-![alt text](https://github.com/Rancor38/monster/blob/main/Screenshot%202.png?raw=true)
-![alt text](https://github.com/Rancor38/monster/blob/main/Screenshot%203.png?raw=true)
+![alt text](https://github.com/Rancor38/monster/blob/main/Screenshot%202022-09-03%20at%201.09.36%20AM.png?raw=true)
 
 ## TECHNOLOGIES USED
 The application is built in React, and uses HTML, CSS, JavaScript, the [Open5e API](https://open5e.com/ "Open5e API"), React Router, and might use Bootstrap in a future update.
