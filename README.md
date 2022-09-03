@@ -5,7 +5,7 @@ When you first enter the site, every single monster in the 5e System Reference D
 
 ## PICTURES OF WEBSITE HERE
 
-![alt text](https://github.com/Rancor38/monster/blob/main/Screenshot%201.png?raw=true)
+![alt text](https://github.com/Rancor38/monster/blob/main/Screenshot%202022-09-03%20at%201.06.18%20AM.png?raw=true)
 ![alt text](https://github.com/Rancor38/monster/blob/main/Screenshot%202.png?raw=true)
 ![alt text](https://github.com/Rancor38/monster/blob/main/Screenshot%203.png?raw=true)
 
