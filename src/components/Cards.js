@@ -15,8 +15,13 @@ const Cards = (props) => {
 
   //Creating some State
   const [monsters, setMonsters] = useState(null);
+  const [monsters1, setMonsters1] = useState(null);
   const [monsters2, setMonsters2] = useState(null);
   const [monsters3, setMonsters3] = useState(null);
+  const [monsters4, setMonsters4] = useState(null);
+  const [monsters5, setMonsters5] = useState(null);
+  const [monsters6, setMonsters6] = useState(null);
+  const [monsters7, setMonsters7] = useState(null);
   
   const errorFunction = () => {
     <Routes>
@@ -27,15 +32,15 @@ const Cards = (props) => {
   //the master fetch
   useEffect(() => {
     //pulling useEffect in here to manipulate the DOM.
-    const fetchMonsters = () => {
+    const fetchMonsters1 = () => {
       fetch(url)
         .then((res) => res.json())
-        .then((json) => setMonsters(json.results))
+        .then((json) => setMonsters1(json.results))
         .catch((err) => {
           errorFunction();
         });
     }
-    fetchMonsters()
+    fetchMonsters1()
     
     const fetch2Monsters = () => {
       fetch(url + "&page=2")
@@ -56,12 +61,50 @@ const Cards = (props) => {
         });
     }
     fetch3Monsters()
+
+    const fetch4Monsters = () => {
+      fetch(url + "&page=4")
+        .then((res) => res.json())
+        .then((json) => setMonsters4(json.results))
+        .catch((err) => {
+          errorFunction();
+        });
+    }
+    fetch4Monsters()
+    
+    const fetch5Monsters = () => {
+      fetch(url + "&page=5")
+        .then((res) => res.json())
+        .then((json) => setMonsters5(json.results))
+        .catch((err) => {
+          errorFunction();
+        });
+    }
+    fetch5Monsters()
+    
+    const fetch6Monsters = () => {
+      fetch(url + "&page=6")
+        .then((res) => res.json())
+        .then((json) => setMonsters6(json.results))
+        .catch((err) => {
+          errorFunction();
+        });
+    }
+    fetch6Monsters()
+    
+    const fetch7Monsters = () => {
+      fetch(url + "&page=7")
+        .then((res) => res.json())
+        .then((json) => setMonsters7(json.results))
+        .catch((err) => {
+          errorFunction();
+        });
+    }
+    fetch7Monsters()
   }, []);
 
   useEffect(() => {
-    console.log(monsters)
-    console.log(monsters2)
-    monsters && monsters2 ? console.log([...monsters, ...monsters2, ...monsters3]) : console.log('err')
+    monsters1 && monsters2 && monsters3 && monsters4 && monsters5 && monsters6 && monsters7 ? setMonsters([...monsters1, ...monsters2, ...monsters3, ...monsters4, ...monsters5, ...monsters6, ...monsters7]) : console.log('err')
   })
 
   if (!monsters) {
