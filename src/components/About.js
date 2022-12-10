@@ -1,5 +1,5 @@
 import React from 'react';
-import github from '../github.png'
+import github from '../static-images/github.png'
 
 const About = () => {
     return (

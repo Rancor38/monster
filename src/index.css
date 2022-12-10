@@ -63,8 +63,9 @@ header a {
   align-items: center;
   display: flex;
   justify-content: center;
-  background-color: bisque;
+  background-color: rgba(240, 248, 255, 0.491);
   border-radius: 1rem 1rem 0 0;
+  height: 250px;
 }
 
 .card-art {
@@ -74,6 +75,8 @@ header a {
 .card-title {
   background-color: #742727;
   color: white;
+overflow: hidden;
+  height: 200px;
   border-radius: 0 0 1rem 1rem;
   margin: 0;
   padding: 1rem;
@@ -102,6 +105,12 @@ main {
   text-decoration: none;
   color: rgb(0, 64, 255);
   padding-bottom: 1rem;
+  border-radius: 1rem;
+  height: 28rem;
+}
+
+.read-more:hover {
+  box-shadow: 7px 7px 7px 7px rgba(0, 0, 0, 0.492);
 }
 
 .stats {

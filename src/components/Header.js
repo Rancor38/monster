@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import FilterForm from './FilterForm';
 
 const Header = () => {
     return (
@@ -8,9 +7,6 @@ const Header = () => {
         <header>    
             <h2>
                 <Link to='/'>Find Monsters</Link> 
-            </h2>
-            {/* <FilterForm /> */}
-            <h2 >
                 <Link to='/about'>About</Link>
             </h2>
             

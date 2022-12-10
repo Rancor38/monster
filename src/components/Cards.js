@@ -1,20 +1,18 @@
-import { Link, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import React, { useState, useEffect } from "react";
-import dot from "../3-dots-bounce.svg";
+import dot from "../static-images/3-dots-bounce.svg";
 import NotFoundPage from "./NotFoundPage";
 import EmbededImage from "./EmbededImage";
+import { motion } from "framer-motion";
 
 const Cards = (props) => {
   //passing props from App.js to determine which URL we are using.
   const url = props.url;
-  // const url2 = props.url + "&page=2"
-  // const url3 = props.url + "&page=3"
-  // const url4 = props.url + "&page=4"
-  // const url5 = props.url + "&page=5"
-  // const url6 = props.url + "&page=6"
 
   //Creating some State
+  //State for all the monsters
   const [monsters, setMonsters] = useState(null);
+  //State for the other monsters to build the master array
   const [monsters1, setMonsters1] = useState(null);
   const [monsters2, setMonsters2] = useState(null);
   const [monsters3, setMonsters3] = useState(null);
@@ -22,7 +20,9 @@ const Cards = (props) => {
   const [monsters5, setMonsters5] = useState(null);
   const [monsters6, setMonsters6] = useState(null);
   const [monsters7, setMonsters7] = useState(null);
-  
+  //State for the iterator to make fewer fetches.
+
+
   const errorFunction = () => {
     <Routes>
       <Route path="*" element={<NotFoundPage />} />
@@ -31,17 +31,17 @@ const Cards = (props) => {
 
   //the master fetch
   useEffect(() => {
-    //pulling useEffect in here to manipulate the DOM.
+
     const fetchMonsters1 = () => {
-      fetch(url)
+      fetch(url + "&page=1")
         .then((res) => res.json())
         .then((json) => setMonsters1(json.results))
         .catch((err) => {
           errorFunction();
         });
-    }
-    fetchMonsters1()
-    
+    };
+    fetchMonsters1();
+
     const fetch2Monsters = () => {
       fetch(url + "&page=2")
         .then((res) => res.json())
@@ -49,9 +49,9 @@ const Cards = (props) => {
         .catch((err) => {
           errorFunction();
         });
-    }
-    fetch2Monsters()
-    
+    };
+    fetch2Monsters();
+
     const fetch3Monsters = () => {
       fetch(url + "&page=3")
         .then((res) => res.json())
@@ -59,8 +59,8 @@ const Cards = (props) => {
         .catch((err) => {
           errorFunction();
         });
-    }
-    fetch3Monsters()
+    };
+    fetch3Monsters();
 
     const fetch4Monsters = () => {
       fetch(url + "&page=4")
@@ -69,9 +69,9 @@ const Cards = (props) => {
         .catch((err) => {
           errorFunction();
         });
-    }
-    fetch4Monsters()
-    
+    };
+    fetch4Monsters();
+
     const fetch5Monsters = () => {
       fetch(url + "&page=5")
         .then((res) => res.json())
@@ -79,9 +79,9 @@ const Cards = (props) => {
         .catch((err) => {
           errorFunction();
         });
-    }
-    fetch5Monsters()
-    
+    };
+    fetch5Monsters();
+
     const fetch6Monsters = () => {
       fetch(url + "&page=6")
         .then((res) => res.json())
@@ -89,9 +89,9 @@ const Cards = (props) => {
         .catch((err) => {
           errorFunction();
         });
-    }
-    fetch6Monsters()
-    
+    };
+    fetch6Monsters();
+
     const fetch7Monsters = () => {
       fetch(url + "&page=7")
         .then((res) => res.json())
@@ -99,13 +99,42 @@ const Cards = (props) => {
         .catch((err) => {
           errorFunction();
         });
-    }
-    fetch7Monsters()
+    };
+    fetch7Monsters();
   }, []);
 
   useEffect(() => {
-    monsters1 && monsters2 && monsters3 && monsters4 && monsters5 && monsters6 && monsters7 ? setMonsters([...monsters1, ...monsters2, ...monsters3, ...monsters4, ...monsters5, ...monsters6, ...monsters7]) : console.log('err')
-  })
+    const getTheMasterList = () => {
+      if (
+        monsters1 &&
+        monsters2 &&
+        monsters3 &&
+        monsters4 &&
+        monsters5 &&
+        monsters6 &&
+        monsters7
+      ) {
+        setMonsters([
+          ...monsters1,
+          ...monsters2,
+          ...monsters3,
+          ...monsters4,
+          ...monsters5,
+          ...monsters6,
+          ...monsters7,
+        ]);
+      }
+    };
+    getTheMasterList();
+  }, [
+    monsters1,
+    monsters2,
+    monsters3,
+    monsters4,
+    monsters5,
+    monsters6,
+    monsters7,
+  ]);
 
   if (!monsters) {
     return (
@@ -118,7 +147,7 @@ const Cards = (props) => {
 
   return (
     <section className="container">
-      {monsters.map((monster) => {
+      {monsters.map((monster, index) => {
         if (!monster) {
           return (
             <>
@@ -129,12 +158,17 @@ const Cards = (props) => {
         }
         return (
           // A Link to stats/the name of the monster unless its succubus because the name succubus/incubus breaks it, so when it sees that it'll turn it into 'succubus'
-          <Link
-            to={`stats/${
-              monster.name === "Succubus/Incubus" ? "succubus" : monster.name
-            }`}
-            key={monster.name.toString()}
-            className="card"
+          <motion.a
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ opacity: 0 }}
+            viewport={{ once: true }}
+            className="read-more"
+            key={index}
+            href={"https://www.dndbeyond.com/monsters/" + monster.slug}
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <div className="card-image">
               <div>
@@ -150,7 +184,7 @@ const Cards = (props) => {
                 {monster.size} {monster.type}, CR {monster.challenge_rating}
               </h4>
             </div>
-          </Link>
+          </motion.a>
         );
       })}
     </section>
