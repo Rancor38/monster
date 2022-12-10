@@ -24,7 +24,7 @@ h2 {
   font-family: 'Noto Serif', Georgia, serif;
   font-weight: 100;
   margin: 0;
-  border-bottom-style: solid;
+  /* border-bottom-style: solid; */
   border-radius: 20%;
 }
 
