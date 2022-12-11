@@ -33,13 +33,22 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  background-color: black;
+  background-color: rgb(180, 70, 70);
   color: white;
   padding: 1rem;
 }
 
 header a {
   color: white;
+}
+
+header input {
+  font-family: 'Noto Serif', Georgia, serif;
+  font-weight: 100;
+  padding: 6px;
+  border: none;
+  font-size: large;
+  border-radius: 15px;
 }
 
 .container {
