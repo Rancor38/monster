@@ -8,6 +8,8 @@ import { motion } from "framer-motion";
 const Cards = (props) => {
   //passing props from App.js to determine which URL we are using.
   const url = props.url;
+  const searchResult = props.searchResult
+  console.log(searchResult)
 
   //Creating some State
   //State for all the monsters
@@ -20,7 +22,6 @@ const Cards = (props) => {
   const [monsters5, setMonsters5] = useState(null);
   const [monsters6, setMonsters6] = useState(null);
   const [monsters7, setMonsters7] = useState(null);
-  //State for the iterator to make fewer fetches.
 
 
   const errorFunction = () => {
@@ -31,79 +32,81 @@ const Cards = (props) => {
 
   //the master fetch
   useEffect(() => {
+//if a non-searched fetch, we do an initial fetch of what's below
+      const fetchMonsters1 = () => {
+        fetch(url + "&page=1")
+          .then((res) => res.json())
+          .then((json) => setMonsters1(json.results))
+          .catch((err) => {
+            errorFunction();
+          });
+      };
+      fetchMonsters1();
 
-    const fetchMonsters1 = () => {
-      fetch(url + "&page=1")
-        .then((res) => res.json())
-        .then((json) => setMonsters1(json.results))
-        .catch((err) => {
-          errorFunction();
-        });
-    };
-    fetchMonsters1();
+      const fetch2Monsters = () => {
+        fetch(url + "&page=2")
+          .then((res) => res.json())
+          .then((json) => setMonsters2(json.results))
+          .catch((err) => {
+            errorFunction();
+          });
+      };
+      fetch2Monsters();
 
-    const fetch2Monsters = () => {
-      fetch(url + "&page=2")
-        .then((res) => res.json())
-        .then((json) => setMonsters2(json.results))
-        .catch((err) => {
-          errorFunction();
-        });
-    };
-    fetch2Monsters();
+      const fetch3Monsters = () => {
+        fetch(url + "&page=3")
+          .then((res) => res.json())
+          .then((json) => setMonsters3(json.results))
+          .catch((err) => {
+            errorFunction();
+          });
+      };
+      fetch3Monsters();
 
-    const fetch3Monsters = () => {
-      fetch(url + "&page=3")
-        .then((res) => res.json())
-        .then((json) => setMonsters3(json.results))
-        .catch((err) => {
-          errorFunction();
-        });
-    };
-    fetch3Monsters();
+      const fetch4Monsters = () => {
+        fetch(url + "&page=4")
+          .then((res) => res.json())
+          .then((json) => setMonsters4(json.results))
+          .catch((err) => {
+            errorFunction();
+          });
+      };
+      fetch4Monsters();
 
-    const fetch4Monsters = () => {
-      fetch(url + "&page=4")
-        .then((res) => res.json())
-        .then((json) => setMonsters4(json.results))
-        .catch((err) => {
-          errorFunction();
-        });
-    };
-    fetch4Monsters();
+      const fetch5Monsters = () => {
+        fetch(url + "&page=5")
+          .then((res) => res.json())
+          .then((json) => setMonsters5(json.results))
+          .catch((err) => {
+            errorFunction();
+          });
+      };
+      fetch5Monsters();
 
-    const fetch5Monsters = () => {
-      fetch(url + "&page=5")
-        .then((res) => res.json())
-        .then((json) => setMonsters5(json.results))
-        .catch((err) => {
-          errorFunction();
-        });
-    };
-    fetch5Monsters();
+      const fetch6Monsters = () => {
+        fetch(url + "&page=6")
+          .then((res) => res.json())
+          .then((json) => setMonsters6(json.results))
+          .catch((err) => {
+            errorFunction();
+          });
+      };
+      fetch6Monsters();
 
-    const fetch6Monsters = () => {
-      fetch(url + "&page=6")
-        .then((res) => res.json())
-        .then((json) => setMonsters6(json.results))
-        .catch((err) => {
-          errorFunction();
-        });
-    };
-    fetch6Monsters();
-
-    const fetch7Monsters = () => {
-      fetch(url + "&page=7")
-        .then((res) => res.json())
-        .then((json) => setMonsters7(json.results))
-        .catch((err) => {
-          errorFunction();
-        });
-    };
-    fetch7Monsters();
+      const fetch7Monsters = () => {
+        fetch(url + "&page=7")
+          .then((res) => res.json())
+          .then((json) => setMonsters7(json.results))
+          .catch((err) => {
+            errorFunction();
+          });
+      };
+      fetch7Monsters();
   }, []);
 
+  //if a non-searched fetch, useEffect will fetch below
   useEffect(() => {
+    if (!searchResult) {
     const getTheMasterList = () => {
       if (
         monsters1 &&
@@ -126,7 +129,11 @@ const Cards = (props) => {
       }
     };
     getTheMasterList();
+  } else {
+    setMonsters(searchResult)
+  }
   }, [
+    searchResult,
     monsters1,
     monsters2,
     monsters3,
@@ -143,6 +150,12 @@ const Cards = (props) => {
         <img className="card-art" src={dot} alt="dots" />
       </>
     );
+  }
+
+  if (monsters && monsters.length < 1) {
+    return (
+      <p>Oops! No monsters match this search.</p>
+    )
   }
 
   return (
