@@ -11,7 +11,7 @@ const Header = (props) => {
       <h1>Monster Finder 5E</h1>
       <header>
         <motion.h2 whileHover={{ scale: 1.05 }} whileTap={resetChange}>
-          <Link to="/">Find Monsters</Link>
+          <Link to="/">All Monsters</Link>
         </motion.h2>
 
         <motion.div whileHover={{ scale: 1.05 }} className="search">
