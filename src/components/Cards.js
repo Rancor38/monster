@@ -175,7 +175,7 @@ const Cards = (props) => {
             viewport={{ once: true }}
             className="read-more"
             key={index}
-            href={"https://www.dndbeyond.com/monsters/" + monster.slug}
+            href={monster.slug === "succubusincubus" ? "https://www.dndbeyond.com/monsters/succubus" : "https://www.dndbeyond.com/monsters/" + monster.slug}
             target="_blank"
             rel="noopener noreferrer"
           >
