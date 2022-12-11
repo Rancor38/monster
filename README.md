@@ -19,12 +19,6 @@ All you need to work MONSTER FINDER is a modern web browser and you're good to g
 - _As a user, I want to be able to click on a monster and see its stat block so I can use it in my game._
 - _As a user, I want to be able to use this on a phone, tablet, or computer so that I can use the information at my table._
 
-## WIREFRAMES
-These were the concepts for the site I created in Google Slides.
-![alt text](https://github.com/Rancor38/monster/blob/main/proposal/wireframes/Wireframe%201.png?raw=true)
-![alt text](https://github.com/Rancor38/monster/blob/main/proposal/wireframes/Wireframe%202.png?raw=true)
-![alt text](https://github.com/Rancor38/monster/blob/main/proposal/wireframes/Wireframe%203.png?raw=true)
-
 ## APPROACH TAKEN
 I started off with a page for pseudocode and user-stories. I usually place these into the application, but here I put a lot of it into my project proposal, and used wireframes as a guide for components.
 The gist of the app is 5 componants that plug into the App component: About, Cards, Header, Stats, and Breakline. Breakline was the last of these components to implement, and it is the begining of a course to break down the Stats component into more sub-components down the line.
@@ -37,7 +31,7 @@ One key change between the wireframes and the final product is the component hie
 
 Once navigating the API fetch request was complete, actually placing Links, React-Router, State, all took a very long day of refreshing, but I did learn a lot aong the way.
 
-[CLICK THIS LINK TO VISIT THE LIVE SITE](https://monster-finders.netlify.app/)
+[CLICK THIS LINK TO VISIT THE LIVE SITE](https://monsterfinder5e.netlify.app/)
 
 ## THE FUTURE ON MONSTER FINDER
 
