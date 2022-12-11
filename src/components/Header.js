@@ -1,22 +1,34 @@
-import { Link } from 'react-router-dom';
-import FilterForm from './FilterForm';
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
-const Header = () => {
-    return (
-        <>
-        <h1>Monster Finder</h1>
-        <header>    
-            <h2>
-                <Link to='/'>Find Monsters</Link> 
-            </h2>
-            {/* <FilterForm /> */}
-            <h2 >
-                <Link to='/about'>About</Link>
-            </h2>
-            
-        </header>
-        </>
-    );
+const Header = (props) => {
+  const handleChange = props.handleChange;
+  const searchInput = props.searchInput;
+  const resetChange = props.resetChange;
+
+  return (
+    <>
+      <h1>Monster Finder 5E</h1>
+      <header>
+        <motion.h2 whileHover={{ scale: 1.05 }} whileTap={resetChange}>
+          <Link to="/">All Monsters</Link>
+        </motion.h2>
+
+        <motion.div whileHover={{ scale: 1.05 }} className="search">
+          <input
+            type="text"
+            placeholder="Search monsters..."
+            onChange={handleChange}
+            value={searchInput}
+          />
+        </motion.div>
+
+        <motion.h2 whileHover={{ scale: 1.05 }} whileTap={{ opacity: 0 }}>
+          <Link to="/about">About</Link>
+        </motion.h2>
+      </header>
+    </>
+  );
 };
 
 export default Header;

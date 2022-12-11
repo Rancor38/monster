@@ -17,6 +17,7 @@ import { swarmsSlug } from '../monster-arrays/SwarmsArray';
 import { plantsSlug } from '../monster-arrays/PlantsArray';
 import { constructSlug } from '../monster-arrays/ConstructArray';
 import { fiendSlug, succubusSlug } from '../monster-arrays/FiendArray';
+import { beastSlug } from '../monster-arrays/BeastArray';
 
 // A short tag to not repeat url source of images.
 const monUrl = 'https://www.aidedd.org/dnd/images/'
@@ -166,6 +167,14 @@ const EmbededImage = ({monPicSelector}) => {
         return (
         <main>
             <img src={succubus} alt='monster' className='embeded-image'/>
+        </main> 
+        )
+    }
+    // if beast
+    if(beastSlug.includes(monPicSelector)===true) {
+        return (
+        <main>
+            <img src={beast} alt='monster' className='embeded-image'/>
         </main> 
         )
     }
