@@ -199,11 +199,11 @@ text-indent: 2rem;
   }
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   body {
       background: rgb(40, 40, 40);
   }
   h1 {
     color: white;
   }
-}
+} */
