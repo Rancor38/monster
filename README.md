@@ -1,37 +1,37 @@
-# MONSTER FINDER
+# Monster Finder - An Application for Discovering Monsters in 5th Edition Roleplaying Games
 
-MONSTER FINDER is an application for finding monsters to use in your 5th Edition roleplaying game. 
-When you first enter the site, every single monster in the 5e System Reference Document (SRD) will be displayed before you in alphabetical order. Select one of the monsters you would like, and the basic information about that monster will come up, along with a dynamically rendered resource link to the official page for that monster on Wizards of the Caost's website.
+**Description:**
 
-## PICTURE OF WEBSITE HERE
+Monster Finder is a professional-grade application designed to assist players in discovering monsters suitable for their 5th Edition roleplaying game. Upon accessing the site, users will find an extensive listing of all monsters available in the 5e System Reference Document (SRD), neatly organized in alphabetical order. With a simple click on the desired monster, users can access essential information, including its stat block, and conveniently follow a dynamically generated resource link leading to the official page for that monster on Wizards of the Coast's website.
 
-![alt text](https://github.com/Rancor38/monster/blob/main/Screenshot%202022-09-03%20at%201.06.18%20AM.png?raw=true)
+![Monster Finder Website](https://github.com/Rancor38/monster/blob/main/Screenshot%202022-09-03%20at%201.06.18%20AM.png?raw=true)
 
-## TECHNOLOGIES USED
-The application is built in React, and uses HTML, CSS, JavaScript, the [Open5e API](https://open5e.com/ "Open5e API"), React Router, and might use Bootstrap in a future update.
+**Technologies Used:**
 
-INSTALLATION INSTRUCTIONS
-All you need to work MONSTER FINDER is a modern web browser and you're good to go!
+Monster Finder has been crafted using React as the primary framework, and incorporates HTML, CSS, JavaScript, and the reliable [Open5e API](https://open5e.com/ "Open5e API") to provide accurate and up-to-date information. Additionally, the application utilizes React Router for seamless navigation, and there are future plans to potentially integrate Bootstrap in upcoming updates.
 
-## MVP USER STORIES
-- _As a user, I want to see a listing of all of the monsters in 5th edition, so I can decide which ones I want to use in my game._
-- _As a user, I want to be able to click on a monster and see its stat block so I can use it in my game._
-- _As a user, I want to be able to use this on a phone, tablet, or computer so that I can use the information at my table._
+**Instructions:**
 
-## APPROACH TAKEN
-I started off with a page for pseudocode and user-stories. I usually place these into the application, but here I put a lot of it into my project proposal, and used wireframes as a guide for components.
-The gist of the app is 5 componants that plug into the App component: About, Cards, Header, Stats, and Breakline. Breakline was the last of these components to implement, and it is the begining of a course to break down the Stats component into more sub-components down the line.
+The installation process for Monster Finder is straightforward; all that's required is a modern web browser. Once you have a compatible browser, you can quickly access the application and begin exploring a vast array of monsters for your gaming needs.
 
-Then the code started. I needed to refresh myself on API's. The API I picked turned out to be fairly easy to navigate, with one minor hickup, since the docs describe the url as using the slug key, when in fact it uses the name key. This means that some urls have spaces which I had to learn by trial and error, playing around with "what might have happened" with error messages only telling my "x is undefined".
+**MVP User Stories:**
 
-Another thing that tripped me up was the Synchronous Fetch Request, it meant that for the Stats component I had to add some kind of delay to make sure the page didn't turn blank due to failing to load the page on load. This is why the Stats page has a 3 dots file to display when it's loading.
+- As a user, I want to view a comprehensive list of monsters in 5th edition to make informed decisions for my game.
+- As a user, I want the ability to click on a specific monster and access its stat block for easy integration into my game.
+- As a user, I expect the application to be accessible on various devices (phones, tablets, computers) to have the information readily available at my table.
 
-One key change between the wireframes and the final product is the component hierarchy. I actually placed my State into Cards and not the App, and connected each component to app via Cards. I found this was a better way to get the state passed between Cards and Stats, rather than needing to pass it between Cards, Stats, and App. Also Header and About are static components and didn't need state so I chose to  not pass to them what they don't need.
+**Approach Taken:**
 
-Once navigating the API fetch request was complete, actually placing Links, React-Router, State, all took a very long day of refreshing, but I did learn a lot aong the way.
+The development process of Monster Finder involved meticulous planning, starting with the creation of pseudocode and user stories. Additionally, wireframes were designed to guide the development of key components, namely About, Cards, Header, Stats, and Breakline. The incorporation of Breakline was essential, as it lays the groundwork for future subdivisions of the Stats component.
 
-[CLICK THIS LINK TO VISIT THE LIVE SITE](https://monsterfinder5e.netlify.app/)
+The coding phase commenced with a thorough understanding of API usage, with the chosen API proving relatively straightforward to navigate, despite a minor hiccup. An issue arose due to the API documentation inaccurately referencing the "slug" key instead of the correct "name" key for URLs, resulting in some URLs containing spaces. Through trial and error, the necessary adjustments were successfully implemented to overcome these challenges.
 
-## THE FUTURE ON MONSTER FINDER
+Furthermore, the implementation of Synchronous Fetch Requests posed another hurdle, requiring a delay to prevent a blank page upon loading the Stats component. As a result, the Stats page now includes a loading indicator (three dots) to provide a more user-friendly experience.
 
-When I come back, I plan to break the Stats component down further, continue to dry-up my code, and add more coments. There's some data that I didn't get to put on the page because I have to learn more about navigating the API, but that's a stretch goal as I return an tweak the app.
+One notable change from the initial wireframes was the alteration of component hierarchy. State management was optimized by placing it within the Cards component, streamlining the transfer of state information between Cards and Stats. Header and About, being static components, were excluded from receiving unnecessary state data.
+
+**The Future of Monster Finder:**
+
+In the future, Monster Finder has ambitious plans for further enhancement. These improvements encompass breaking down the Stats component into more manageable sub-components, continuous code optimization, and comprehensive commenting for improved readability. Additionally, there are aspirations to leverage the API's full potential and display additional data once proficient in navigating the API effectively. Stay updated as the app evolves and transforms with new tweaks and functionalities.
+
+For an immediate experience of Monster Finder, you can visit the live site by following this [LINK](https://monsterfinder5e.netlify.app/).
