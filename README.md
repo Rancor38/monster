@@ -3,10 +3,9 @@
 MONSTER FINDER is an application for finding monsters to use in your 5th Edition roleplaying game. 
 When you first enter the site, every single monster in the 5e System Reference Document (SRD) will be displayed before you in alphabetical order. Select one of the monsters you would like, and the basic information about that monster will come up, along with a dynamically rendered resource link to the official page for that monster on Wizards of the Caost's website.
 
-## PICTURES OF WEBSITE HERE
+## PICTURE OF WEBSITE HERE
 
 ![alt text](https://github.com/Rancor38/monster/blob/main/Screenshot%202022-09-03%20at%201.06.18%20AM.png?raw=true)
-![alt text](https://github.com/Rancor38/monster/blob/main/Screenshot%202022-09-03%20at%201.09.36%20AM.png?raw=true)
 
 ## TECHNOLOGIES USED
 The application is built in React, and uses HTML, CSS, JavaScript, the [Open5e API](https://open5e.com/ "Open5e API"), React Router, and might use Bootstrap in a future update.
